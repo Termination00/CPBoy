@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include <sdk/calc/calc.h>
-#include "../core/peanut_gb_header.h"
+#include "walnut_cgb.h"
 
 #define DEFAULT_GB_KEY_A_0      KEY_EXE
 #define DEFAULT_GB_KEY_A_1      0
