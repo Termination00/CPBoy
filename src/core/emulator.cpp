@@ -13,7 +13,7 @@
 #include "cart_ram.h"
 #include "error.h"
 #include "frametimes.h"
-#include "peanut_gb.h"
+#include "walnut_cgb.h"
 #include "../cas/cpu/cmt.h"
 #include "../cas/cpu/cpg.h"
 #include "../cas/cpu/dmac.h"
