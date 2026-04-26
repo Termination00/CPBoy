@@ -54,6 +54,8 @@
 #include <string.h>	/* Required for memset */
 #include <time.h>	/* Required for tm struct */
 
+#define WALNUT_GB_IS_LITTLE_ENDIAN 1
+
 /**
 * If WALNUT_GB_IS_LITTLE_ENDIAN is positive, then Walnut-GB will be configured
 * for a little endian platform. If 0, then big endian.
@@ -71,9 +73,9 @@
 // Like the above, this can break compatibility with some games and is disabled by default.
 #define WALNUT_GB_16_BIT_OPS 0
 // WALNUT_GB_16BIT_DMA uses 16-bit(and 32-bit) dma transfers rather than byte-by-byte, only one mode can be used at a time. The gb_read_32bit function is used for the 32-bit DMA, otherwise that function will not be called
-//  **Note:** The current implementation of 16-bit DMA is limited to systems that do not have aliasing or alignment restrictions when writing data (e.g., ESP32-S3). On some platforms, you may need to compile with `-fno-strict-aliasing` to avoid issues with pointer aliasing.
-#define WALNUT_GB_16BIT_DMA 0
-#define WALNUT_GB_32BIT_DMA 1
+//  **Note:** The current implementation of 16-bit DMA is limited to systems that do not have aliasing or alignment restrictions when writing data (e.g., ESP32-S3). On some platforms, you may need to compile with `-fno-strict-aliasing` to avoid issues with pointer aliasing.  
+#define WALNUT_GB_16BIT_DMA 1
+#define WALNUT_GB_32BIT_DMA 0
 // Uses alignment aware read/writes with an 8-bit fallback (16-bit alignment implemented for read path only in this version)
 #define WALNUT_GB_16BIT_ALIGNED 1
 #define WALNUT_GB_32BIT_ALIGNED 1
@@ -120,7 +122,7 @@ void __gb_step_cpu_x(struct gb_s *gb);
  * before including walnut_cgb.h in order for these functions to be used.
  */
 #ifndef ENABLE_SOUND
-# define ENABLE_SOUND 1
+# define ENABLE_SOUND 0
 #endif
 
 /* Enable LCD drawing. On by default. May be turned off for testing purposes. */
