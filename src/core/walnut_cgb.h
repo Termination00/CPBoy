@@ -37,8 +37,8 @@
  */
 // Everything is from walnut_cgb,with some modifications
 
-// #ifndef WALNUT_GB_H
-// #define WALNUT_GB_H
+#ifndef WALNUT_GB_H
+#define WALNUT_GB_H
 // #if defined(__has_include)
 // # if __has_include("version.all")
 // #  include "version.all"	/* Version information */
